@@ -17,9 +17,10 @@ const Stack = createStackNavigator();
     return (
         <NavigationContainer>
           <Stack.Navigator initialRouteName="home">
+          <Stack.Screen name="Perfil" component={Perfil} options={{headerShown: false}} />
+
              <Stack.Screen name="Home" component={Home} options={{headerShown: false}} />
              <Stack.Screen name="Carrinho" component={Carrinho} options={{headerShown: false}}/>
-             <Stack.Screen name="Perfil" component={Perfil} options={{headerShown: false}} />
              <Stack.Screen name="Detail" component={Detail} options={{headerShown: false}} />
              <Stack.Screen name="Cadastro" component={Cadastro} options={{headerShown: false}} />
           </Stack.Navigator>
