@@ -3,47 +3,18 @@ import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-const Stack = createStackNavigator();
+
 
 export default function App() {
   // o nome atribuido será usado futuramente para navegar entre as as telas, será inserido em  onPress={() => navigation.navigate('nomedatela)
-   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-         <Stack.Screen name="Home" component={Home} />
-         <Stack.Screen name="Carrinho" component={TelaCarrinho}/>
-         <Stack.Screen name="Perfil" component={TelaPerfil} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  ); 
+  return(
+    <View>
+      <Tex>Telinha app</Tex>
+    </View>
+  )
 }
 
-function Home({ navigation }) {
-/*  clicou=() =>{
-    Alert.alert('logado com sucesso','parabéns');
-      }*/
- return (
-  <View style={styles.container}>
-  <TextInput
-   style={styles.input}
-  placeholder="Digite seu CPF"
-  />
-   <TextInput
-   style={styles.input}
-   secureTextEntry= {true}
-  placeholder="Digite sua senha"
-  />
 
-  <Button title='Carrinho' style={styles.botaoLogin}  onPress={() => navigation.navigate('Carrinho')}/>
-
-  <Button title='Perfil' style={styles.botaoCadastro}  onPress={() => navigation.navigate('Perfil')}/>
-
- 
-</View>
-    
-  );
-  
-}
 
 
 function TelaPerfil({ navigation }) {
