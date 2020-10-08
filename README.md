@@ -25,3 +25,4 @@
   <li>MYSQL</li>
   <li>.NETCore</li>
  </ul>
+git config --global http.sslVerify false
