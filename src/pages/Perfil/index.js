@@ -23,7 +23,7 @@ export default function Perfil({navigation}) {
               style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
               onPress={() => {
                 setModalVisible(!modalVisible);
-              }}
+              }}//uma modal precisa estar dentro da view,
             >
               <Text style={styles.textStyle}>Hide Modal</Text>
             </TouchableHighlight>
