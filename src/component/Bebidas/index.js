@@ -10,10 +10,8 @@ export default function Bebidas() {
     unidade--
   }
   return (
-
-
+// <Image source={require('../img/pepsi.png')} />
     <TouchableOpacity style={styles.container}>
-      <Image source={require('../img/pepsi.png')} />
       <Text>Coca Cola</Text>
       <Image style={styles.tinyLogo}
         source={{
@@ -27,7 +25,6 @@ export default function Bebidas() {
         <Button title='adicionar' />
       </View>
     </TouchableOpacity>
-
   );
 }
 
@@ -45,8 +42,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   container:{
-  width:'90%',
+  width:'50%',
   height: '35%',
-marginLeft:"12%",
+marginLeft:"2%",
+marginTop:"2%",
   }
 });
