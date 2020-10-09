@@ -4,8 +4,7 @@ import fonts from './fonts';
 
 const general = {
   container: {
-    flex: 1,
-    backgroundColor: colors.background,
+      backgroundColor: colors.backgroundColor,
   },
   section: {
     margin: metrics.doubleBaseMargin,
