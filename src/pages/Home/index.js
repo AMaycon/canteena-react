@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, View, Button, SafeAreaView, Text } from 'react-native';
 import { TextInput, TouchableHighlight } from 'react-native-gesture-handler';
-import Constants from 'expo-constants';
+import styles from './styles'
 
 
 export default function Home({ navigation }) {
@@ -38,29 +38,3 @@ export default function Home({ navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: Constants.statusBarHeight,
-  
-  },
-  fixToText: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 9,
-    marginTop: 15,
-    
-  },
-  btnback: {
-    fontSize: 64,
-    borderRadius:50
-  },
-  entrada:{
-    marginTop:8,
-    marginBottom:9,
-   
-  },
-  telalogin:{
-    marginHorizontal:12
-  }
-});
