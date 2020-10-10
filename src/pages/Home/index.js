@@ -24,7 +24,7 @@ export default function Home({ navigation }) {
         />
 
         <TouchableHighlight style={styles.btnback}
-          onPress={() => navigation.goBack()}>
+          onPress={() => navigation.navigate('Vitrine')}>
             <Text>qualquer</Text>
           </TouchableHighlight>
 
