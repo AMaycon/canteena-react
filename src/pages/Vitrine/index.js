@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { View, Text, ScrollView, Image, Modal, TouchableHighlight, TouchableOpacity } from 'react-native';
-import { Container, ScrollViewH, ScrollViewV } from "../../styles/cores";
+import { View, Text, ScrollView, Image, Modal, TouchableOpacity } from 'react-native';
+import { Container, ScrollViewV } from "../../styles/cores";
 import styles from './styles'
+import Produtos from '../../component/Produtos'
 
 export default function Vitrine({ navigation }) {
 
@@ -66,9 +67,8 @@ export default function Vitrine({ navigation }) {
                             </Modal>
 
                             <TouchableOpacity style={styles.openButton} onPress={() => { setModalVisible(true); }}                     >
-                                <Image style={{ height: 80, width: 80 }} source={require('../../img/fantau.jpg')} />
-                                <Text >Fanta uva Lata</Text>
-                                <Text >Preço R$5,50</Text>
+                                <Produtos/>
+                              
                             </TouchableOpacity>
                         </View>
 

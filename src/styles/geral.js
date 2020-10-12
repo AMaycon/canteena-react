@@ -1,12 +1,13 @@
-import medidas from './medidas';
-import cores from './cores';
-import fontes from './fontes';
 
-/*const geral = {
-  container: {
-      backgroundColor:cores.Container,
-  },
-  section: {
+import styled from 'styled-components/native';
+
+
+export const container = styled.View`
+background-color: #ffb74d;
+flex:1;
+`;
+
+ /* section: {
     margin: medidas.doubleBaseMargin,
   },
   sectionTitle: {
