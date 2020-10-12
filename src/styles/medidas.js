@@ -2,7 +2,7 @@ import { Dimensions, Platform } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
 
-const metrics = {
+const medidas = {
   smallMargin: 5,
   baseMargin: 10,
   doubleBaseMargin: 20,
@@ -14,6 +14,8 @@ const metrics = {
   baseRadius: 3,
 };
 
-export default metrics;
 
-//metrics.js: Margens, paddings, tamanhos configurados pela plataforma (ex.: StatusBar), Border Radius, etc. Tudo que está ligado diretamente com espaçamento e ocupação de um componente em tela vai nesse arquivo.
+/*metrics.js: Margens, paddings, tamanhos configurados pela plataforma
+ (ex.: StatusBar), Border Radius, etc. Tudo que está ligado diretamente
+  com espaçamento e ocupação de um componente em tela vai nesse arquivo.
+  */

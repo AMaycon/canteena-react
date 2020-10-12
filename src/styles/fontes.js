@@ -1,4 +1,4 @@
-const fonts = {
+const fontes = {
     input: 16,
     regular: 14,
     medium: 12,
@@ -6,6 +6,5 @@ const fonts = {
     tiny: 10,
   };
   
-  export default fonts;
 
 //onts.js: Aqui é onde armazeno os tamanhos de fontes utilizadas no projeto, então, assim como no colors, todos tamanhos de fontes devem possuir algum significado e por isso estão nesse arquivo.

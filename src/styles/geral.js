@@ -1,24 +1,23 @@
-import metrics from './metrics';
-import colors from './colors';
-import fonts from './fonts';
+import medidas from './medidas';
+import cores from './cores';
+import fontes from './fontes';
 
-const general = {
+/*const geral = {
   container: {
-      backgroundColor: colors.backgroundColor,
+      backgroundColor:cores.Container,
   },
   section: {
-    margin: metrics.doubleBaseMargin,
+    margin: medidas.doubleBaseMargin,
   },
   sectionTitle: {
-    color: colors.text,
+    color: cores.text,
     fontWeight: 'bold',
-    fontSize: fonts.regular,
+    fontSize: fontes.regular,
     alignSelf: 'center',
-    marginBottom: metrics.doubleBaseMargin,
+    marginBottom: medidas.doubleBaseMargin,
   },
 };
 
-export default general;
 
 /*
  general.js: O arquivo general é o único diferente dos demais.
