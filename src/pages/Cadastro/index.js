@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { View,Button,InputOutline } from 'react-native';
+import { View,Button } from 'react-native';
 import styles from './styles'
-
+import InputOutline from 'react-native-input-outline';
 
 
 export default function Cadastro({ navigation}) {

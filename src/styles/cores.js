@@ -1,6 +1,6 @@
 
 const cores = {
-    Header: '#333333',
+    header: '#333333',
     primary: '#069',
     background: '#ffb74d',
     
