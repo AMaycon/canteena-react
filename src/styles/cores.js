@@ -1,5 +1,17 @@
-import styled from 'styled-components/native';
 
+const cores = {
+    Header: '#333333',
+    primary: '#069',
+    background: '#ffb74d',
+    
+    
+  };
+  
+  export default cores;
+
+
+
+/*
 export const Container = styled.View`
 background-color: #ffb74d;
 flex:1;
@@ -26,6 +38,7 @@ padding - Horizontal: 2 %;
 margin - Top: 3 %;
 margin - Bottom: 4 %;
 `;
+*/
 
 /*colors.js: Responsável por armazenar as cores utilizadas na aplicação,
  e aqui vai desde cores para layouts como cores do TextInput, textos em geral, botões, etc.

@@ -1,23 +1,17 @@
 
-import styled from 'styled-components/native';
+import medidas from './medidas';
+import cores from './cores';
+import fontes from './fontes';
 
-
-export const container = styled.View`
-background-color: #ffb74d;
-flex:1;
-`;
-
- /* section: {
-    margin: medidas.doubleBaseMargin,
+const geral = {
+  container: {
+    flex: 1,
+    backgroundColor: cores.background,
   },
-  sectionTitle: {
-    color: cores.text,
-    fontWeight: 'bold',
-    fontSize: fontes.regular,
-    alignSelf: 'center',
-    marginBottom: medidas.doubleBaseMargin,
-  },
+
 };
+
+export default geral;
 
 
 /*
