@@ -25,4 +25,11 @@
   <li>MYSQL</li>
   <li>.NETCore</li>
  </ul>
+ <h4> Para iniciar o projeto instalar os pacotes:</h4>
+ <ul>
+  <li>NPM: npm install </li>
+  <li>Styled components: npm install --save styled-components</li>
+  <li></li>
+  <li></li>
+ </ul>
 git config --global http.sslVerify false
