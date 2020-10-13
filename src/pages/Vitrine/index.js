@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { View, Text, ScrollView, Image, Modal, TouchableOpacity } from 'react-native';
-import { Container, ScrollViewV } from "../../styles/cores";
 import styles from './styles'
 import Produtos from '../../component/Produtos'
 
@@ -9,24 +8,24 @@ export default function Vitrine({ navigation }) {
     const [modalVisible, setModalVisible] = useState(false);
 
     function filtrodescricao(descricao) {
-        if (descricao.length < 27) {
-            return descricao;
-        }
-
-        return `${descricao.substring(0, 24)}...`;
-    }
-
-    function add(quantidade) {
-        return quantidade += quantidade;
-    }
-
-    function remove(quantidade) {
-        return quantidade -= quantidade;
-    }
+           if (descricao.length < 27) {
+               return descricao;
+           }
+   
+           return `${descricao.substring(0, 24)}...`;
+       }
+   
+       function add(quantidade) {
+           return quantidade += quantidade;
+       }
+   
+       function remove(quantidade) {
+           return quantidade -= quantidade;
+       }
 
     return (
-        <Container>
-            <ScrollViewV>
+        <View>
+            <ScrollView>
                 <View  >
                     <Text >Escolha seus produtos</Text>
                 </View>
@@ -67,8 +66,8 @@ export default function Vitrine({ navigation }) {
                             </Modal>
 
                             <TouchableOpacity style={styles.openButton} onPress={() => { setModalVisible(true); }}                     >
-                                <Produtos/>
-                              
+                                <Produtos />
+
                             </TouchableOpacity>
                         </View>
 
@@ -190,7 +189,7 @@ export default function Vitrine({ navigation }) {
                     </ScrollView>
                 </View>
 
-            </ScrollViewV>
-        </Container>
+            </ScrollView>
+        </View>
     );
 }

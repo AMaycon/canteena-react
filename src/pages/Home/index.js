@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Image, View, Button, SafeAreaView, Text } from 'react-native';
 import { TextInput, TouchableHighlight } from 'react-native-gesture-handler';
 import styles from './styles'
-import { Header } from "../../styles/cores";
 
 
 
@@ -12,11 +11,10 @@ export default function Home({ navigation }) {
     <SafeAreaView style={styles.container} >
 
       <View>
-        <Header>
-          <Image style={{ alignItems: "center", height: 100, width: 100 }} source={require('../../img/iconehome.png')} />
-          <Text>Bem vindo a Canteena</Text>
-        </Header>
+        <Image style={{ alignItems: "center", height: 100, width: 100 }} source={require('../../img/iconehome.png')} />
+        <Text>Bem vindo a Canteena</Text>
       </View>
+
       <View style={styles.telalogin} >
         <TextInput style={styles.entrada} placeholder="Digite seu CPF" />
         <TextInput style={styles.entrada} secureTextEntry={true} placeholder="Digite sua senha" />
