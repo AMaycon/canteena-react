@@ -11,8 +11,8 @@ export default function Cadastro({ }) {
       <TextInput style={styles.entrada} secureTextEntry={true} placeholder="Digite sua senha" />
       <TextInput style={styles.entrada} placeholder="Repita sua senha" />
 
-      <Button title='Carrinho' onPress={() => navigation.navigate('Carrinho')} />
-      <Button title='Perfil' onPress={() => navigation.navigate('Perfil')} />
+      <Button title='Cadastrar' onPress={() => navigation.navigate('Home')} />
+      <Button title='Limpar' onPress={() => navigation.navigate('')} />
     </View>
   );
 }

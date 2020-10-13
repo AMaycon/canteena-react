@@ -8,26 +8,23 @@ flex:1;
 export const Header = styled.View`
 background-color: #ffb74d;
 flex:1;
-width: 100%;
-paddingVertical: 2%;
-paddingHorizontal: 2%;
-marginTop: 2%;
-text-align:center;
-`;
+align-items: center;
+marginTop: 5%;
+`
 
 export const ScrollViewV = styled.ScrollView`
-  flex: 1;
-  width: 100%;
-  paddingVertical: 2%;
-  paddingHorizontal: 2%;
-  marginTop: 2%;
+flex: 1;
+width: 100 %;
+paddingVertical: 2 %;
+paddingHorizontal: 2 %;
+marginTop: 2 %;
 `;
 
 export const ScrollViewH = styled.ScrollView`
-  padding-Vertical: 2%;
-  padding-Horizontal: 2%;
-  margin-Top: 3%;
-  margin-Bottom: 4%;
+padding - Vertical: 2 %;
+padding - Horizontal: 2 %;
+margin - Top: 3 %;
+margin - Bottom: 4 %;
 `;
 
 /*colors.js: Responsável por armazenar as cores utilizadas na aplicação,
