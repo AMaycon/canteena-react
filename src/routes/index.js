@@ -2,13 +2,12 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import style from './styles/index'
-import Home from './pages/Home';
-import Detail from './pages/Detail';
-import Carrinho from './pages/Carrinho';
-import Perfil from './pages/Perfil';
-import Cadastro from './pages/Cadastro';
-import Vitrine from './pages/Vitrine';
+import Home from '../pages/Home';
+import Detail from '../pages/Detail';
+import Carrinho from '../pages/Carrinho';
+import Perfil from '../pages/Perfil';
+import Cadastro from '../pages/Cadastro';
+import Vitrine from '../pages/Vitrine';
 
 const Stack = createStackNavigator();
 

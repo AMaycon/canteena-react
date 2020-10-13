@@ -26,7 +26,8 @@ const styles = StyleSheet.create({
      
     },
     telalogin:{
-      marginHorizontal:12
+      marginHorizontal:12,
+      marginTop:"85%",
     }
   });
 

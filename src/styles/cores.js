@@ -2,6 +2,17 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
 background-color: #ffb74d;
+flex:1;
+`;
+
+export const Header = styled.View`
+background-color: #ffb74d;
+flex:1;
+width: 100%;
+paddingVertical: 2%;
+paddingHorizontal: 2%;
+marginTop: 2%;
+text-align:center;
 `;
 
 export const ScrollViewV = styled.ScrollView`
