@@ -7,9 +7,6 @@ import { Header } from "../../styles/cores";
 
 
 export default function Home({ navigation }) {
-  /*  clicou=() =>{
-      Alert.alert('logado com sucesso','parabéns');
-        }*/
   return (
 
     <SafeAreaView style={styles.container} >
