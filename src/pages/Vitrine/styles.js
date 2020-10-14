@@ -9,6 +9,12 @@ const styles = StyleSheet.create({
         marginTop: '3%',
         marginBottom: "4%",
     },
+    flat:{
+        paddingVertical: "2%",
+        paddingHorizontal: '2%',
+        marginTop: '15%',
+        marginBottom: "4%",
+    },
 
     fixToText: {
         flexDirection: 'row',
