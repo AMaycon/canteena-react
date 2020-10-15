@@ -8,7 +8,6 @@ import Carrinho from '../../pages/Carrinho';
 import Perfil from '../../pages/Perfil';
 import Cadastro from '../../pages/Cadastro';
 import Vitrine from '../../pages/Vitrine';
-import carrinhoProvider from '../../context/carrinho';
 
 const Stack = createStackNavigator();
 
@@ -16,7 +15,7 @@ const Stack = createStackNavigator();
 
 export default function Routes() {
   return (
-    <carrinhoProvider>
+    
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Vitrine">
           <Stack.Screen name="Perfil" component={Perfil} options={{ headerShown: true }} />
@@ -27,6 +26,6 @@ export default function Routes() {
           <Stack.Screen name="Vitrine" component={Vitrine} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
-    </carrinhoProvider>
+    
   );
 }
