@@ -82,121 +82,23 @@ export default function Vitrine({ navigation }) {
                             </TouchableOpacity>
                         </View>
 
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/pepsi.png')} />
-                        <Text >Pepsi Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/fantau.jpg')} />
-                        <Text >Fanta uva Lata</Text>
+                       
+                    </ScrollView>
 
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/fantal.png')} />
-                        <Text >Fanta Laranja</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                    </ScrollView>
-                    <Text >Escolha seus produtos</Text>
+                    <Text >**************************************************</Text>
                     <ScrollView style={styles.scrollhor} horizontal={true} directionalLockEnabled={true}  >
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/pepsi.png')} />
-                        <Text >Pepsi Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/fantau.jpg')} />
-                        <Text >Fanta uva Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/fantal.png')} />
-                        <Text >Fanta Laranja</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
+                    <Produtos />
                     </ScrollView>
-                    <Text >Escolha seus produtos</Text>
-                    <ScrollView style={styles.scrollhor} horizontal={true}  >
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/pepsi.png')} />
-                        <Text >Pepsi Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/fantau.jpg')} />
-                        <Text >Fanta uva Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/fantal.png')} />
-                        <Text >Fanta Laranja</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                    </ScrollView>
-                    <Text >Escolha seus produtos</Text>
-                    <ScrollView style={styles.scrollhor} horizontal={true}  >
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/pepsi.png')} />
-                        <Text >Pepsi Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/fantau.jpg')} />
-                        <Text >Fanta uva Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/fantal.png')} />
-                        <Text >Fanta Laranja</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                    </ScrollView>
+                    
+
+                    <Text >**************************************************</Text>
                     <ScrollView style={styles.scrollhor} horizontal={true} directionalLockEnabled={true}  >
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/pepsi.png')} />
-                        <Text >Pepsi Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/fantau.jpg')} />
-                        <Text >Fanta uva Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/fantal.png')} />
-                        <Text >Fanta Laranja</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
+                    <Produtos />
                     </ScrollView>
-                    <Text >Escolha seus produtos</Text>
-                    <ScrollView style={styles.scrollhor} horizontal={true}  >
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/pepsi.png')} />
-                        <Text >Pepsi Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/fantau.jpg')} />
-                        <Text >Fanta uva Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/fantal.png')} />
-                        <Text >Fanta Laranja</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                    </ScrollView>
-                    <Text >Escolha seus produtos</Text>
-                    <ScrollView style={styles.scrollhor} horizontal={true}  >
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/pepsi.png')} />
-                        <Text >Pepsi Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/fantau.jpg')} />
-                        <Text >Fanta uva Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/fantal.png')} />
-                        <Text >Fanta Laranja</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                    </ScrollView>
-                    <Text >Escolha seus produtos</Text>
-                    <ScrollView style={styles.scrollhor} horizontal={true}  >
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/pepsi.png')} />
-                        <Text >Pepsi Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/fantau.jpg')} />
-                        <Text >Fanta uva Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/fantal.png')} />
-                        <Text >Fanta Laranja</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
-                        <Image style={{ height: 80, width: 80 }} source={require('../../img/coca.jpg')} />
-                        <Text >Coca Cola Lata</Text>
+
+                    <Text >**************************************************</Text>
+                    <ScrollView style={styles.scrollhor} horizontal={true} directionalLockEnabled={true}  >
+                    <Produtos />
                     </ScrollView>
                 </View>
 
