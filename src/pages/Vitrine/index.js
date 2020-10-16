@@ -7,6 +7,7 @@ import Produtos from '../../component/Produtos'
 export default function Vitrine({ navigation }) {
 
     const [modalVisible, setModalVisible] = useState(false);
+    const [quantidade, setQuantidade] = useState(0);
 
 
     function filtrodescricao(descricao) {
@@ -17,22 +18,32 @@ export default function Vitrine({ navigation }) {
         return `${descricao.substring(0, 24)}...`;
     }
 
-    function mais(quantidade) {
-        return quantidade += quantidade;
-    }
+    
 
-    function menos(quantidade) {
-        return quantidade -= quantidade;
+    function add() {
+      setQuantidade(quantidade + 1);
     }
+  
+    function remove() {
+  
+      if (quantidade <= 0) {
+        setQuantidade(quantidade)
+      } else {
+        setQuantidade(quantidade - 1);
+  
+      }
+    }
+  
 
     return (
 
 
         <View>
+            <View style={styles.cabecalho} >
+                <Text>Escolha seus produtos</Text>
+            </View>
             <ScrollView>
-                <View  >
-                    <Text >Escolha seus produtos</Text>
-                </View>
+
                 <View>
                     <ScrollView style={styles.scrollhor} horizontal={true} directionalLockEnabled={true} >
                         <View style={styles.centeredView}>
@@ -42,33 +53,32 @@ export default function Vitrine({ navigation }) {
                                         <Text style={styles.modalText}>Informações qualquer</Text>
                                         <View style={styles.botoesModal}>
                                             <TouchableOpacity style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
-                                                onPress={() => {
-                                                    setModalVisible(!modalVisible);
-                                                }}//uma modal precisa estar dentro da view,
+                                                onPress={add}//uma modal precisa estar dentro da view,
                                             >
                                                 <Text style={styles.textStyle}>+</Text>
                                             </TouchableOpacity>
 
                                             <TouchableOpacity style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
-                                                onPress={() => add(item)}//uma modal precisa estar dentro da view,
+                                                onPress={() => {
+                                                    setModalVisible(!modalVisible);
+                                                }}//uma modal precisa estar dentro da view,
                                             >
                                                 <Text style={styles.textStyle}>adicionar ao carrinho</Text>
                                             </TouchableOpacity>
 
                                             <TouchableOpacity style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
-                                                onPress={() => {
-                                                    setModalVisible(!modalVisible);
-                                                }}//uma modal precisa estar dentro da view,
+                                                onPress={remove}//uma modal precisa estar dentro da view,
                                             >
                                                 <Text style={styles.textStyle}>-</Text>
                                             </TouchableOpacity>
                                         </View>
+                                            <Text>{quantidade} total R${quantidade*2},00</Text>
                                     </View>
                                 </View>
                             </Modal>
 
                             <TouchableOpacity style={styles.openButton} onPress={() => { setModalVisible(true); }}                     >
-                                <Produtos/>
+                                <Produtos />
                             </TouchableOpacity>
                         </View>
 
@@ -191,6 +201,9 @@ export default function Vitrine({ navigation }) {
                 </View>
 
             </ScrollView>
+            <View style={styles.rodape} >
+                <Text>Escolha seus produtos</Text>
+            </View>
         </View >
     );
 }

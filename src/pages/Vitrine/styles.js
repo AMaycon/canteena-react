@@ -15,8 +15,17 @@ const styles = StyleSheet.create({
         marginTop: '15%',
         marginBottom: "4%",
     },
-
-    fixToText: {
+    cabecalho:{
+        backgroundColor: "#893",
+        marginTop:"5%",
+        padding: "08%"
+    },
+    rodape:{
+        backgroundColor: "#658",
+        marginTop:"80%",
+        padding: "8%"
+    },
+      fixToText: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginBottom: 9,
