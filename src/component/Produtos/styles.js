@@ -1,8 +1,6 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-
-
     scrollhor: {
         paddingVertical: "2%",
         paddingHorizontal: '2%',
@@ -14,16 +12,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: '2%',
         marginTop: '15%',
         marginBottom: "4%",
-    },
-    cabecalho:{
-        backgroundColor: "#893",
-        marginTop:"5%",
-        padding: "08%"
-    },
-    rodape:{
-        backgroundColor: "#658",
-        marginTop:"80%",
-        padding: "8%"
     },
       fixToText: {
         flexDirection: 'row',
@@ -40,32 +28,33 @@ const styles = StyleSheet.create({
     centeredView: {
         flex: 1,
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "stretch",
         marginTop: 22,
         width:100,
         height:100,
+        marginVertical:8
     },
 
     modalView: {
         margin: 20,
         backgroundColor: "white",
         borderRadius: 20,
-        padding: 35,
+        padding: 120,
         alignItems: "center",
         shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 2
-        },
-        shadowOpacity: 0.25,
+        shadowOpacity: 0.75,
         shadowRadius: 3.84,
         elevation: 5
-    },
+      },
     openButton: {
-        backgroundColor: "#F194FF",
+        backgroundColor: "#e3f2fd",
         borderRadius: 20,
         padding: 10,
-        elevation: 2
+        elevation: 2,
+        width:120,
+        height:120,
+        justifyContent: 'space-between',
+        
     },
     textStyle: {
         color: "white",
@@ -79,8 +68,10 @@ const styles = StyleSheet.create({
     botoesModal: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginBottom: 9,
-        marginTop: 15,
+       justifyContent:'center',
+        height:"60%",
+        width:"160%",
+       
     },
 });
 export default styles;
