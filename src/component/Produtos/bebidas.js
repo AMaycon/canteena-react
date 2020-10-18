@@ -43,19 +43,20 @@ export default function Bebidas() {
 
 
 
-    return  (
+    return (
         <View>
             <FlatList horizontal={true}
                 data={vbebidas}
                 renderItem={({ item }) => (
                     <TouchableOpacity style={styles.openButton} onPress={() => { setModalVisible(true); }}  >
-
-
-
-                        <Image style={{ with: 75, heigth: 75 }} source={{ uri: item.img }} />
-                        <Text>{item.nome}</Text>
-                        <Text>Valor : {item.valor.toFixed(2)}</Text>
-                        <Text>Disponíveis : {item.quantidade}</Text>
+                        <View>
+                            <Image style={{ width: 60, height: 60 }} source={{ uri: item.img }} />
+                            <View>
+                                <Text>{item.nome}</Text>
+                                <Text>Valor : {item.valor.toFixed(2)}</Text>
+                                <Text>Disponíveis : {item.quantidade}</Text>
+                            </View>
+                        </View>
                     </TouchableOpacity>
                 )
                 }

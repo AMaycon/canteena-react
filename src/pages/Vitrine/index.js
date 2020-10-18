@@ -1,5 +1,5 @@
 import React from "react";
-import { View} from 'react-native';
+import { Text, View} from 'react-native';
 import { Fragment } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Bebidas from "../../component/Produtos/bebidas";
@@ -13,7 +13,7 @@ export default function Vitrine({ navigation }) {
 
     return (
         <Fragment>
-            <SafeAreaView style={{ height:"15%", flex:0.5, backgroundColor: 'blue' }}/>
+            <SafeAreaView style={{ height:"8%", backgroundColor: 'blue',marginTop:"6%" }}/>
                 <View>
                     <Bebidas/>
                 </View>
@@ -23,7 +23,14 @@ export default function Vitrine({ navigation }) {
                 <View>
                     <Doces/>
                 </View>
-            <SafeAreaView style={{ marginTop:"75%", flex: 0.5, backgroundColor: 'red' }} />
+                <View>
+                    <Text>Valor total R$</Text>
+                    <Text>Quantidade de itens : </Text>
+                </View>
+                <View>
+                    <Text>Fechar pedido </Text>
+                </View>
+            <SafeAreaView style={{height:"8%", backgroundColor: 'red',marginTop:"25%"}} />
         </Fragment>
     );
 }

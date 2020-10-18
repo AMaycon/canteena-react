@@ -51,8 +51,8 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         padding: 10,
         elevation: 2,
-        width:120,
-        height:120,
+        width:140,
+        height:140,
         justifyContent: 'space-between',
         
     },
