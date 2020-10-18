@@ -1,8 +1,8 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View,Text } from 'react-native';
 
 export default function Detail() {
  return (
-  <Text>Algo</Text>
+  <Text style={{flex:1, marginTop:25}}>Algo</Text>
   );
 }
