@@ -33,7 +33,7 @@ export default function Vitrine({ navigation }) {
             </View>
             <View style={{ height: "30%", marginBottom: 0, marginTop: "-45%", }}>
                 <Text>Valor total R$</Text>
-                <Text>Quantidade de itens : </Text>
+                <Text>Quantidade de itens :  </Text>
                 <Button title="fechar pedido" />
             </View>
 

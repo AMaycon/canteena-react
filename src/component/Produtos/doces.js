@@ -91,21 +91,7 @@ export default function Doces() {
                 }
                 keyExtractor={item => item.id}
             />
-            <View style={styles.centeredView}>
-                <Modal animationType="slide" transparent={true} visible={modalVisible}>
-                    <View style={styles.modalView}>
-                        <Text style={styles.modalText}>Informações qualquer</Text>
-                        
-                        <View>
-                        <Text>Quantidade : </Text>
-                        <Text>total: {total}</Text>
-                    </View>
-                    </View>
-                    
-                </Modal>
-
-
-            </View>
+          
 
 
         </View>
