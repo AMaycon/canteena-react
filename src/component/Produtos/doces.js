@@ -64,34 +64,34 @@ export default function Doces() {
                                 <Text>Disponíveis : {item.quantidade}</Text>
                             </View>
                             <View style={styles.botoesModal}>
-                            <TouchableOpacity style={{
-                                width: "45%", height: "45%", backgroundColor: "#d50000", borderRadius: 25, justifyContent: 'center',
-                                alignItems: 'center',
-                            }}
-                            // onPress={}//uma modal precisa estar dentro da view,
-                            >
-                                <Text style={styles.textStyle}>-</Text>
-                            </TouchableOpacity>
+                                <TouchableOpacity style={{
+                                    width: "45%", height: "45%", backgroundColor: "#d50000", borderRadius: 25, justifyContent: 'center',
+                                    alignItems: 'center',
+                                }}
+                                // onPress={}//uma modal precisa estar dentro da view,
+                                >
+                                    <Text style={styles.textStyle}>-</Text>
+                                </TouchableOpacity>
 
 
-                           
-                            <TouchableOpacity style={{
-                                width: "45%", height: "45%", backgroundColor: "#2196F3", borderRadius: 25, justifyContent: 'center',
-                                alignItems: 'center',
-                            }} onPress={() => { add }}
-                            //uma modal precisa estar dentro da view,
-                            >
-                                <Text style={styles.textStyle}>+</Text>
-                            </TouchableOpacity>
 
-                        </View>
+                                <TouchableOpacity style={{
+                                    width: "45%", height: "45%", backgroundColor: "#2196F3", borderRadius: 25, justifyContent: 'center',
+                                    alignItems: 'center',
+                                }} onPress={() => { add }}
+                                //uma modal precisa estar dentro da view,
+                                >
+                                    <Text style={styles.textStyle}>+</Text>
+                                </TouchableOpacity>
+
+                            </View>
                         </View>
                     </TouchableOpacity>
                 )
                 }
                 keyExtractor={item => item.id}
             />
-          
+
 
 
         </View>
