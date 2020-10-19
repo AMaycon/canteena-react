@@ -45,67 +45,63 @@ export default function Salgados() {
 
     return (
         <View>
-            <FlatList horizontal={true}
-                data={vsalgado}
-                renderItem={({ item }) => (
-                    <TouchableOpacity style={styles.openButton} onPress={() => { setModalVisible(true); }}  >
+        <FlatList horizontal={true}
+            data={vsalgado}
+            renderItem={({ item }) => (
+                <TouchableOpacity style={styles.openButton}  >
+
+                    <View>
+                        <Image style={{ width: 60, height: 60 }} source={{ uri: item.img }} />
                         <View>
-                            <Image style={{ width: 60, height: 60 }} source={{ uri: item.img }} />
-                            <View>
-                                <Text>{item.nome}</Text>
-                                <Text>Valor : {item.valor.toFixed(2)}</Text>
-                                <Text>Disponíveis : {item.quantidade}</Text>
-                            </View>
+                            <Text>{item.nome}</Text>
+                            <Text>Valor :R$ {item.valor.toFixed(2)}</Text>
+                            <Text>Disponíveis : {item.quantidade}</Text>
                         </View>
-                    </TouchableOpacity>
-                )
-                }
-                keyExtractor={item => item.id}
-            />
-            <View style={styles.centeredView}>
-                <Modal animationType="slide" transparent={true} visible={modalVisible}>
-                    <View style={styles.modalView}>
-                        <Text style={styles.modalText}>Informações qualquer</Text>
                         <View style={styles.botoesModal}>
-                            <TouchableOpacity style={{
-                                width: "45%", height: "45%", backgroundColor: "#d50000", borderRadius: 25, justifyContent: 'center',
-                                alignItems: 'center',
-                            }}
-                                onPress={remove}//uma modal precisa estar dentro da view,
-                            >
-                                <Text style={styles.textStyle}>-</Text>
-                            </TouchableOpacity>
+                        <TouchableOpacity style={{
+                            width: "45%", height: "45%", backgroundColor: "#d50000", borderRadius: 25, justifyContent: 'center',
+                            alignItems: 'center',
+                        }}
+                        // onPress={}//uma modal precisa estar dentro da view,
+                        >
+                            <Text style={styles.textStyle}>-</Text>
+                        </TouchableOpacity>
 
 
-                            <TouchableOpacity style={{
-                                marginHorizontal: "8%", width: "85%", height: "45%", backgroundColor: "#64dd17", borderRadius: 25, justifyContent: 'center',
-                                alignItems: 'center',
-                            }}
-                                onPress={() => {
-                                    setModalVisible(!modalVisible);
-                                }}//uma modal precisa estar dentro da view,
-                            >
-                                <Text style={styles.textStyle}>adicionar ao carrinho</Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={{
-                                width: "45%", height: "45%", backgroundColor: "#2196F3", borderRadius: 25, justifyContent: 'center',
-                                alignItems: 'center',
-                            }} onPress={() => { add(vsalgado.valor) }}
-                            //uma modal precisa estar dentro da view,
-                            >
-                                <Text style={styles.textStyle}>+</Text>
-                            </TouchableOpacity>
+                       
+                        <TouchableOpacity style={{
+                            width: "45%", height: "45%", backgroundColor: "#2196F3", borderRadius: 25, justifyContent: 'center',
+                            alignItems: 'center',
+                        }} onPress={() => { add }}
+                        //uma modal precisa estar dentro da view,
+                        >
+                            <Text style={styles.textStyle}>+</Text>
+                        </TouchableOpacity>
 
-                        </View>
-                        <Text>Quantidade : {quantidade}</Text>
-                        <Text>total: {total}</Text>
                     </View>
-                </Modal>
-
-
-            </View>
+                    </View>
+                </TouchableOpacity>
+            )
+            }
+            keyExtractor={item => item.id}
+        />
+        <View style={styles.centeredView}>
+            <Modal animationType="slide" transparent={true} visible={modalVisible}>
+                <View style={styles.modalView}>
+                    <Text style={styles.modalText}>Informações qualquer</Text>
+                    
+                    <View>
+                    <Text>Quantidade : </Text>
+                    <Text>total: {total}</Text>
+                </View>
+                </View>
+                
+            </Modal>
 
 
         </View>
+
+
+    </View>
     )
 }

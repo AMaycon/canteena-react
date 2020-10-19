@@ -51,8 +51,8 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         padding: 10,
         elevation: 2,
-        width:140,
-        height:140,
+        width:160,
+        height:160,
         justifyContent: 'space-between',
         
     },
@@ -67,10 +67,10 @@ const styles = StyleSheet.create({
     },
     botoesModal: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
-       justifyContent:'center',
-        height:"60%",
-        width:"160%",
+        justifyContent:'center',
+        height:"40%",
+        width:"80%",
+        marginHorizontal:"8%"
        
     },
 });
