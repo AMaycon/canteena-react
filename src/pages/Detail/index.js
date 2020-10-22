@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList, Image, TouchableOpacity, TouchableOpacityBase } from 'react-native';
 import { StyleSheet } from 'react-native';
 
 export default function Detail() {
@@ -12,14 +12,22 @@ export default function Detail() {
   ]
   const [total, setTotal] = useState(0);
 
-  const Add = () => {
-    const [quantidade, setQuantidade] = useState(10);
+  const Botoes = () => {
+    const [quantidade, setQuantidade] = useState(0);
 
     return (
       <View>
         <View style={styles.botoesModal}>
-          <TouchableOpacity style={{ width: "45%", height: "45%", backgroundColor: "#d50000", borderRadius: 25, justifyContent: 'center', alignItems: 'center', }}
-
+          <TouchableOpacity  style={{ width: "45%", height: "45%", backgroundColor: "#d50000", borderRadius: 25, justifyContent: 'center', alignItems: 'center', }}
+            onPress={() => {
+              if (quantidade > 0)  {
+                setQuantidade(quantidade - 1)
+                
+              }
+              else if (quantidade <=1) {
+                setQuantidade(quantidade * 0)
+              }
+            }}
           >
             <Text style={styles.textStyle}>-</Text>
           </TouchableOpacity>
@@ -54,7 +62,7 @@ export default function Detail() {
               <Text>{item.nome}</Text>
               <Text>Valor : {item.valor}</Text>
               <Text>Disponíveis : {item.quantidade}</Text>
-              <Add />
+              <Botoes />
 
 
             </View>
