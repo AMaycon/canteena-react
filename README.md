@@ -27,10 +27,10 @@
  </ul>
  <h4> Para iniciar o projeto instalar os pacotes:</h4>
  <ul>
- <li><a href="https://nodejs.org/en/download/">Node</a></li>
- <li><a href="https://www.npmjs.com/get-npm">NPM: npm install </a></li>
-  <li><a href="https://styled-components.com/docs/basics#installation"> Styled components: npm install --save styled-components</a></li>
-  <li><a href="https://www.npmjs.com/package/react-native-input-outline"> Outline  npm i -- save react-native-input-outline</a></li>
+ <li><a href="https://nodejs.org/en/download/"></a>Node</li>
+ <li><a href="https://www.npmjs.com/get-npm"></a>NPM: npm install </li>
+ <li><a href="https://styled-components.com/docs/basics#installation"> Styled components:</a> npm install --save styled-components</li>
+ <li><a href="https://www.npmjs.com/package/react-native-input-outline"> Outline</a>  npm i -- save react-native-input-outline</li>
   <li></li>
  </ul>
 git config --global http.sslVerify false
