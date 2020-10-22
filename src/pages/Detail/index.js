@@ -10,26 +10,63 @@ export default function Detail() {
     { 'id': '14', 'nome': 'chocolate em barra', 'valor': '1.25', 'disponiveis': '256', 'img': "https://images.rappi.com.br/products/2092815470-1562018339.png?d=200x200&e=webp" },
     { 'id': '15', 'nome': 'bombom', 'valor': '0.75', 'disponiveis': '128', 'img': "https://images.rappi.com.br/products/2094042258-1585595140573.png?d=200x200&e=webp" },
   ]
-
-  const [quantidade, setQuantidade] = useState(80);
   const [total, setTotal] = useState(0);
 
-  function add() {
-    setQuantidade(quantidade + 1);
+  const Add = () => {
+    const [quantidade, setQuantidade] = useState(10);
 
-  }
+    return (
+      <View>
+        <View style={styles.botoesModal}>
+          <TouchableOpacity style={{ width: "45%", height: "45%", backgroundColor: "#d50000", borderRadius: 25, justifyContent: 'center', alignItems: 'center', }}
+
+          >
+            <Text style={styles.textStyle}>-</Text>
+          </TouchableOpacity>
+
+
+
+          <TouchableOpacity style={{ width: "45%", height: "45%", backgroundColor: "#2196F3", borderRadius: 25, justifyContent: 'center', alignItems: 'center', }}
+            onPress={() => setQuantidade(quantidade + 1)}
+
+          >
+            <Text style={styles.textStyle}>+</Text>
+          </TouchableOpacity>
+
+        </View>
+
+
+        <Text>Disponíveis: {quantidade}</Text>
+      </View>
+    );
+  };
+
 
 
   return (
-    <View >
+    <View style={{ flex: 1, marginTop: "20%" }}>
+      <FlatList horizontal={true}
+        data={vdoces}
+        renderItem={({ item }) => (
+          <View>
+            <Image style={{ width: 80, height: 80 }} source={{ uri: item.img }} />
+            <View>
+              <Text>{item.nome}</Text>
+              <Text>Valor : {item.valor}</Text>
+              <Text>Disponíveis : {item.quantidade}</Text>
+              <Add />
 
-      <TouchableOpacity style={{ width: "45%", height: "45%", backgroundColor: "#2196F3", borderRadius: 25, justifyContent: 'center', alignItems: 'center', }}
-        onPress={() => { add }}
 
-      >
-        <Text style={styles.textStyle}>+</Text>
-      </TouchableOpacity>
-      <Text>quantidade : {quantidade}</Text>
+            </View>
+            <View>
+
+            </View>
+          </View>
+
+        )
+        }
+        keyExtractor={item => item.id}
+      />
 
 
     </View>
