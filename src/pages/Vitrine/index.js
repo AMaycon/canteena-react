@@ -26,6 +26,7 @@ export default function Vitrine({ navigation }) {
                     <View style={{ height: "25%", marginTop: "-5%" }} >
                         <Doces />
                     </View>
+
                 </ScrollView>
 
 

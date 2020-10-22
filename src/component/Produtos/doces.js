@@ -13,9 +13,7 @@ export default function Doces() {
     */    ]
 
 
-    const [modalVisible, setModalVisible] = useState(false);
-    // const [quantidade, setQuantidade] = useState(0);
-    //const [total, setTotal] = useState(0);
+    const [quantidade, setQuantidade] = useState(80);
     const total = vdoces.map(t => t.quantidade * t.valor)
     // const valor = ({valor})=> valor >=0
     //const quantidade =  vdoces.map(t => t.quantidade)
@@ -28,14 +26,11 @@ export default function Doces() {
         return `${descricao.substring(0, 24)}...`;
     }
     function add() {
-
-
-        if (qtd >= 1) {
-            vlr * qtd
-        }
-        vlr = vlr
-        qtd = qtd
-    }
+        setQuantidade( quantidade + 1);
+     
+    
+    
+      }
     /*
         function remove() {
     
