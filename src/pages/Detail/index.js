@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, FlatList, Image, TouchableOpacity, TouchableOpacityBase, Button } from 'react-native';
+import { View, Text, FlatList, Image, TouchableOpacity, Button } from 'react-native';
 import { StyleSheet } from 'react-native';
 
-export default function Detail() {
+export default  function Detail() {
   const vdoces = [
     { 'id': '11', 'nome': 'Bala', 'valor': '0.5', 'disponiveis': '1024', 'img': "https://images.vexels.com/media/users/3/152046/isolated/lists/85695cafa4b8d7604260c93663808f6e-icone-de-doces-embrulhados.png" },
     { 'id': '12', 'nome': 'chiclete', 'valor': '0.15', 'disponiveis': '352', 'img': "https://images.rappi.com.br/products/2092815412-1562018300.png?d=136x136" },
@@ -26,7 +26,6 @@ export default function Detail() {
       }}
       function Remover() {
         setQuantidade(quantidade + 1), setTotal(quantidade * 2)
-
       }
 
 

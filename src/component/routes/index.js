@@ -8,6 +8,7 @@ import Carrinho from '../../pages/Carrinho';
 import Perfil from '../../pages/Perfil';
 import Cadastro from '../../pages/Cadastro';
 import Vitrine from '../../pages/Vitrine';
+import Teste from '../../pages/Teste';
 
 const Stack = createStackNavigator();
 
@@ -17,13 +18,14 @@ export default function Routes() {
   return (
     
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Detail">
+        <Stack.Navigator initialRouteName="Teste">
           <Stack.Screen name="Perfil" component={Perfil} options={{ headerShown: true }} />
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Carrinho" component={Carrinho} options={{ headerShown: false }} />
           <Stack.Screen name="Detail" component={Detail} options={{ headerShown: false }} />
           <Stack.Screen name="Cadastro" component={Cadastro} options={{ headerShown: false }} />
           <Stack.Screen name="Vitrine" component={Vitrine} options={{ headerShown: false }} />
+          <Stack.Screen name="Teste" component={Teste} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     
