@@ -2,6 +2,8 @@ import React from 'react';
 import { View } from 'react-native';
 
 export default function Teste() {
+    var person={"first_name":"Tony","last_name":"Hawk","age":31};
+    var personJSONString=JSON.stringify(person); 
  return (
 /*
 map ->
@@ -10,8 +12,8 @@ console.log(valor)
 exibir a informação do array ?
 })
 */ 
-    var person={"first_name":"Tony","last_name":"Hawk","age":31};
-    var personJSONString=JSON.stringify(person); 
+   
+    
     
     const myObjStr = JSON.stringify(myObj);
 
