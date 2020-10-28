@@ -8,6 +8,22 @@ const geral = {
     flex: 1,
     backgroundColor: cores.background,
   },
+  header: {
+    flex: 0.5,
+    display: 'flex',
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  telalogin: {
+    marginLeft: "5%",
+    marginRight: "5%",
+
+  },
+  text:{
+    fontSize: 29,
+    color:"black",
+  }
 
 };
 
@@ -22,7 +38,7 @@ export default geral;
  */
 /*
 Ao invés de criar um componente chamado Section você apenas importa os estilos do general.js
- no seu arquivo styles.js e sai usando as propriedades section e secionTitle. 
+ no seu arquivo styles.js e sai usando as propriedades section e secionTitle.
  A importação pode ser realizada da seguinte forma:
 
  import { StyleSheet } from 'react-native';
@@ -31,4 +47,4 @@ const styles = StyleSheet.create({
   ...general,
 });
 export default styles;
-*/ 
+*/

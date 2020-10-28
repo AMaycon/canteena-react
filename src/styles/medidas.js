@@ -14,6 +14,7 @@ const medidas = {
   baseRadius: 3,
 };
 
+
 export default medidas;
 /*metrics.js: Margens, paddings, tamanhos configurados pela plataforma
  (ex.: StatusBar), Border Radius, etc. Tudo que está ligado diretamente
