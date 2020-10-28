@@ -5,7 +5,7 @@ import { StyleSheet } from 'react-native';
 export default function Detail() {
 
   const mercadoria = '{ "id": 11, "nome": "Bala", "valor": 0.5, "disponiveis": 1024}';
-  const objMerc = JSON.parse(mercadoria)
+  const mostrar
   
 
   function aFilter() {
@@ -16,9 +16,12 @@ export default function Detail() {
   function aMap() {
   
     return (
-      alert({objMerc})
-      
+      mostrar = mercadoria.map(produto =>{
+        return produto 
+      })
     )
+      alert(mostrar)
+    
   }
 
 
