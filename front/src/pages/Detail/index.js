@@ -4,26 +4,24 @@ import { StyleSheet } from 'react-native';
 
 export default function Detail() {
 
-  const mercadoria = '{ "id": 11, "nome": "Bala", "valor": 0.5, "disponiveis": 1024}';
-  const mostrar
-  
-
-  function aFilter() {
-    setQuantidade(quantidade + 1), setTotal(quantidade * 2)
-
-  }
+  const mercadoria = [{ id: 11, nome: "Bala", valor: 0.5, disponiveis: 1024 },{id: 12, nome: "Chiclete", valor: 0.25, disponiveis: 120}];
 
   function aMap() {
-  
-    return (
-      mostrar = mercadoria.map(produto =>{
-        return produto 
-      })
-    )
-      alert(mostrar)
+    var prod = mercadoria.map(produto => produto.nome)
+    var prod1 = mercadoria.map(produto => produto.valor)
+    var prod2 = mercadoria.map(produto => produto.disponiveis)
+
     
+      alert(`Produto: ${prod} \n Valor ${prod1}\n Disponíveis ${prod2}`
+    )
   }
 
+  function aFilter() {
+    var prod3 = mercadoria.filter(produto => produto.nome === 'Bala')
+
+    
+    alert(`Filtrar nome igual a Bala `+prod3)
+  }
 
   function aReduce() {
     setQuantidade(quantidade + 1), setTotal(quantidade * 2)
@@ -31,23 +29,18 @@ export default function Detail() {
   }
 
 
-
-
   return (
     <View style={styles.header} >
       <Text>  Este é oarray normal: </Text>
-
-
       <Text>   'id': '11', 'nome': 'Bala', 'valor': '0.5', 'disponiveis': '1024' ,
-
       </Text>
       <View style={styles.botoesModal}>
-        <Button title="map" color="red" onPress={() => { aMap()}} />
-        <Button title="filter" color="blue" onPress={() => { Remover() }} />
-        <Button title="reduce" color="green" onPress={() => { Remover() }} />
+        <Button title="map" color="red" onPress={() => { aMap() }} />
+        <Button title="filter" color="blue" onPress={() => { aFilter() }} />
+        <Button title="reduce" color="green" onPress={() => { aReduce() }} />
       </View>
-      <Text>Disponíveis: </Text>
-      <Text>SubTotal: </Text>
+      <Text>Disponíveis:  </Text>
+      <Text>SubTotal:  </Text>
     </View>
   )
 }
