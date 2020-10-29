@@ -17,7 +17,7 @@ export default function Detail() {
   }
 
   function aFilter() {
-    var prod3 = mercadoria.filter(produto => produto.nome === 'Bala')
+    var prod3 = mercadoria.filter(produto => produto.nome !== 'Bala')
 
     
     alert(`Filtrar nome igual a Bala `+prod3)
