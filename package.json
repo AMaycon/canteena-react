@@ -13,6 +13,7 @@
     "@react-navigation/stack": "^5.9.2",
     "@reduxjs/toolkit": "^1.4.0",
     "expo": "~39.0.2",
+    "expo-cli": "^3.28.4",
     "expo-status-bar": "~1.0.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -24,7 +25,7 @@
     "react-native-screens": "~2.10.1",
     "react-native-web": "~0.13.12",
     "save": "^2.4.0",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0"
