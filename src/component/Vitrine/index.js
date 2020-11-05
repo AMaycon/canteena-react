@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Text, View } from 'react-native';
+import { Button, Text, View,TouchableOpacity } from 'react-native';
 import { Fragment } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Bebidas from "../../component/Produtos/bebidas";
@@ -15,8 +15,8 @@ export default function Vitrine({ navigation }) {
     useEffect(() => {
         async function ListaEstoque() {
             await api.get('/produtos')
-            .then((response) => setProdutos(response.data))
-            .catch(erro => console.log(erro))
+                .then((response) => setProdutos(response.data))
+                .catch(erro => console.log(erro))
         }
         ListaEstoque()
     }, [])
@@ -26,7 +26,14 @@ export default function Vitrine({ navigation }) {
             {produtos.map((item) => (
                 <View key={item._id}>
                     <Text>{item.nome_produto}</Text>
+                    <TouchableOpacity style={{
+                                    width: "45%", height: "45%", backgroundColor: "#d50000", borderRadius: 25, justifyContent: 'center',
+                                    alignItems: 'center',
+                                }}
+                                // onPress={}//uma modal precisa estar dentro da view,
+                                ></TouchableOpacity>
                 </View>
+
             ))}
             {/* <SafeAreaView style={{ height: "7%", backgroundColor: 'blue', marginTop: "6%" }} />
             <View>
@@ -38,7 +45,7 @@ export default function Vitrine({ navigation }) {
                     <Salgados />
                 </View>
                 <View style={{ height: "25%", marginTop: "-5%" }} >
-                <Doces />
+                <Doces/>
             </View>
                 </ScrollView>
 
