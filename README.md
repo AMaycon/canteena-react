@@ -31,6 +31,7 @@
  <li><a href="https://www.npmjs.com/get-npm">NPM</a>: npm install </li>
  <li><a href="https://styled-components.com/docs/basics#installation"> Styled components:</a> npm install --save styled-components</li>
  <li><a href="https://www.npmjs.com/package/react-native-input-outline"> Outline</a>  npm i -- save react-native-input-outline</li>
- <li><a href="https://docs.expo.io/">Expo : npm install --global expo-cli</a> </li>
+ <li><a href="https://docs.expo.io/">Expo</a> : npm install --global expo-cli </li>
+<li> npm install apisauce</li>
  </ul>
 git config --global http.sslVerify false
