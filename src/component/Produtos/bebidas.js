@@ -19,7 +19,7 @@ export default function Bebidas() {
         <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <FlatList
             data={produtos}
-            keyExtractor={(item) => item._id}
+            keyExtractor={item => item._id}
             horizontal
             renderItem={({item})=>(
                 <View>

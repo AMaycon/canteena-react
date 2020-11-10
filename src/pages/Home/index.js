@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Image, View, Button, SafeAreaView, Text } from 'react-native';
-import { TextInput, TouchableHighlight } from 'react-native-gesture-handler';
-import { geral, medidas } from '../../styles';
+import { TextInput} from 'react-native-gesture-handler';
+import { geral} from '../../styles';
 import styles from './styles'
 
 

@@ -44,20 +44,22 @@ export default function Doces() {
     }, [])
 
     return (
-        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-           <FlatList
+        <View style={{ flex: 1 }}>
+            <FlatList
                 data={produtos}
-                keyExtractor={(item) => item._id}
-                horizontal
-                renderItem={({item})=>(
+                keyExtractor={item => item._id}
+                renderItem={({ item }) => (
                     <View>
-                        <Text>{item.nome_produto}</Text>
-                        <Text>{item.qtd_produto}</Text>
-                        <Text>{item.preco_produto}</Text>
-                        
+                        <Image style={{ width: 60, height: 60 }} source={{ uri: item.imagem_txt }} />
+                        <View>
+                            <Text>{item.nome_produto}</Text>
+                            <Text>{item.qtd_produto}</Text>
+                            <Text>{item.preco_produto}</Text>
+                            <Text>{item.descricao_produto}</Text>
+                        </View>
                     </View>
                 )}
-            />  
+            />
         </View>
     );
 }
