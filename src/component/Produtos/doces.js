@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { View, Text, FlatList, Image, Modal, TouchableOpacity } from 'react-native';
+import React, { useEffect, useState } from "react";
+import { View, Text } from 'react-native';
 import styles from './styles';
+import api from '../../services/api'
+import { FlatList } from "react-native-gesture-handler";
+
 
 export default function Doces() {
 
-    const [quantidade, setQuantidade] = useState(80);
-    const total = vdoces.map(t => t.quantidade * t.valor)
-    
     function filtrodescricao(descricao) {
         if (descricao.length < 27) {
             return descricao;
@@ -14,68 +14,50 @@ export default function Doces() {
 
         return `${descricao.substring(0, 24)}...`;
     }
-    function add() {
-        setQuantidade( quantidade + 1);
-     
-      }
-    /*
-        function remove() {
-    
-            if (quantidade <= 0) {
-                setQuantidade(quantidade)
-            } else {
-                setQuantidade(quantidade - 1);
-    
-            }
-        }
-    */
+    function add(valor) {
+        setQuantidade(quantidade + 1);
 
+        if (quantidade >= 1) {
+            setTotal((valor) * (quantidade));
+        }
+    }
+
+    function remove() {
+
+        if (quantidade <= 0) {
+            setQuantidade(quantidade)
+        } else {
+            setQuantidade(quantidade - 1);
+
+        }
+    }
+
+    const [produtos, setProdutos] = useState([])
+
+    useEffect(() => {
+        async function ListaEstoque() {
+            await api.get('/filtro?tipo_produto=2')
+                .then((response) => setProdutos([response.data]))
+                .catch(erro => console.log(erro))
+        }
+        ListaEstoque()
+    }, [])
 
     return (
-        <View>
-            <FlatList horizontal={true}
-                data={vdoces}
-                renderItem={({ item }) => (
-                    <TouchableOpacity style={styles.openButton}  >
-
-                        <View>
-                            <Image style={{ width: 60, height: 60 }} source={{ uri: item.img }} />
-                            <View>
-                                <Text>{item.nome}</Text>
-                                <Text>Valor :R$ {item.valor.toFixed(2)}</Text>
-                                <Text>Disponíveis : {item.quantidade}</Text>
-                            </View>
-                            <View style={styles.botoesModal}>
-                                <TouchableOpacity style={{
-                                    width: "45%", height: "45%", backgroundColor: "#d50000", borderRadius: 25, justifyContent: 'center',
-                                    alignItems: 'center',
-                                }}
-                                // onPress={}//uma modal precisa estar dentro da view,
-                                >
-                                    <Text style={styles.textStyle}>-</Text>
-                                </TouchableOpacity>
-
-
-
-                                <TouchableOpacity style={{
-                                    width: "45%", height: "45%", backgroundColor: "#2196F3", borderRadius: 25, justifyContent: 'center',
-                                    alignItems: 'center',
-                                }} onPress={() => { add }}
-                                //uma modal precisa estar dentro da view,
-                                >
-                                    <Text style={styles.textStyle}>+</Text>
-                                </TouchableOpacity>
-
-                            </View>
-                        </View>
-                    </TouchableOpacity>
-                )
-                }
-                keyExtractor={item => item.id}
-            />
-
-
-
+        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+           <FlatList
+                data={produtos}
+                keyExtractor={(item) => item._id}
+                horizontal
+                renderItem={({item})=>(
+                    <View>
+                        <Text>{item.nome_produto}</Text>
+                        <Text>{item.qtd_produto}</Text>
+                        <Text>{item.preco_produto}</Text>
+                        
+                    </View>
+                )}
+            />  
         </View>
-    )
+    );
 }
