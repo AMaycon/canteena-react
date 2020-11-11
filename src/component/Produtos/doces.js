@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { View, Text } from 'react-native';
-import styles from './styles';
+import { View, Text, Image } from 'react-native';
 import api from '../../services/api'
 import { FlatList } from "react-native-gesture-handler";
 
 
-export default function Doces() {
+export default function Doces({navigation}) {
 
     function filtrodescricao(descricao) {
         if (descricao.length < 27) {
@@ -37,24 +36,24 @@ export default function Doces() {
     useEffect(() => {
         async function ListaEstoque() {
             await api.get('/filtro?tipo_produto=2')
-                .then((response) => setProdutos([response.data]))
+                .then((response) => setProdutos(response.data))
                 .catch(erro => console.log(erro))
         }
         ListaEstoque()
     }, [])
 
     return (
-        <View style={{ flex: 1 }}>
-            <FlatList
+        <View >
+            <FlatList horizontal
                 data={produtos}
-                keyExtractor={item => item._id}
+                keyExtractor={(item) => item._id}
                 renderItem={({ item }) => (
                     <View>
                         <Image style={{ width: 60, height: 60 }} source={{ uri: item.imagem_txt }} />
                         <View>
                             <Text>{item.nome_produto}</Text>
-                            <Text>{item.qtd_produto}</Text>
-                            <Text>{item.preco_produto}</Text>
+                            <Text>Diposníveis: {item.qtd_produto}</Text>
+                            <Text>R${item.preco_produto.toFixed(2)}</Text>
                             <Text>{item.descricao_produto}</Text>
                         </View>
                     </View>

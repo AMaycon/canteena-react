@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Text, View, SafeAreaView } from 'react-native';
-import styles from './styles'
+import { Text, View} from 'react-native';
 import Bebidas from "../../component/Produtos/bebidas";
 import Salgados from "../../component/Produtos/salgados";
 import Doces from "../../component/Produtos/doces";
