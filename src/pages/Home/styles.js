@@ -1,8 +1,10 @@
 import { StyleSheet } from 'react-native';
-import { geral } from '../../styles';
 
 const styles = StyleSheet.create({
-  ...geral,
+  container: {
+    flex: 1,
+    backgroundColor: "red"
+  }
    
 });
 

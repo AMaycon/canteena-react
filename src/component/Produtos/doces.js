@@ -44,9 +44,10 @@ export default function Doces({navigation}) {
 
     return (
         <View >
+            <Text>Docinhos</Text>
             <FlatList horizontal
                 data={produtos}
-                keyExtractor={(item) => item._id}
+                keyExtractor={item => item._id}
                 renderItem={({ item }) => (
                     <View>
                         <Image style={{ width: 60, height: 60 }} source={{ uri: item.imagem_txt }} />

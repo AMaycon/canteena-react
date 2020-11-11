@@ -3,6 +3,9 @@ import { Dimensions, Platform } from 'react-native';
 const { width, height } = Dimensions.get('window');
 
 const medidas = {
+  botoes:{
+    borderRadius:10,
+  },
   smallMargin: 5,
   baseMargin: 10,
   doubleBaseMargin: 20,

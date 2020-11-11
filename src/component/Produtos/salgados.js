@@ -4,7 +4,7 @@ import { View, Text, FlatList, Image, Modal, TouchableOpacity } from 'react-nati
 import styles from './styles';
 
 export default function Salgados() {
-  
+
     const [produtos, setProdutos] = useState([])
 
     useEffect(() => {
@@ -18,6 +18,7 @@ export default function Salgados() {
 
     return (
         <View >
+            <Text>Salgadinhos</Text>
             <FlatList horizontal
                 data={produtos}
                 keyExtractor={(item) => item._id}

@@ -17,7 +17,7 @@ const Stack = createStackNavigator();
 export default function Routes() {
   return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Cadastro">
+        <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name="Perfil" component={Perfil} options={{ headerShown: false }} />
           <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
           <Stack.Screen name="Carrinho" component={Carrinho} options={{ headerShown: false }} />

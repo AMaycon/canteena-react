@@ -20,9 +20,18 @@ const geral = {
     marginRight: "5%",
 
   },
-  text:{
+  text: {
     fontSize: 29,
-    color:"black",
+    color: "black",
+  },
+  dados: {
+    fontSize: 29,
+    color: "black",
+  },
+  botoeshome: {
+    fontSize: 35,
+    color: "black",
+    width: "80%",
   }
 
 };

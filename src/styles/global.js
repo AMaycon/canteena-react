@@ -1,13 +1,9 @@
-import { createGLobalStyle } from 'styled-components/native';
+import { StyleSheet } from 'react-native';
+import { geral } from 'styles';
 
-export default createGlobalStyle`
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
 
-    body {
-        background: #eee;
-    }
-`
+const styles = StyleSheet.create({
+  ...geral,
+});
+
+export default styles;

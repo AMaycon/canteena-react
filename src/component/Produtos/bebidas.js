@@ -18,6 +18,7 @@ export default function Bebidas() {
 
     return (
         <View >
+            <Text>Bebidas</Text>
             <FlatList horizontal
                 data={produtos}
                 keyExtractor={(item) => item._id}
