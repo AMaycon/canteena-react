@@ -16,8 +16,8 @@ export default function Home({ navigation }) {
       </View>
 
       <View style={styles.dados} >
-        <TextInput placeholder="Digite seu CPF" />
-        <TextInput secureTextEntry={true} placeholder="Digite sua senha" />
+        <TextInput style={styles.textoinput} placeholder="Digite seu CPF" />
+        <TextInput style={styles.textoinput} secureTextEntry={true} placeholder="Digite sua senha" />
       </View>
       <View  style={styles.botoes} >
         <TouchableHighlight style={styles.botoeshome} onPress={() => navigation.navigate('Vitrine')}>

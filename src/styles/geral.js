@@ -24,10 +24,7 @@ const geral = {
     fontSize: 29,
     color: "black",
   },
-  dados: {
-    fontSize: 29,
-    color: "black",
-  },
+  
   botoeshome: {
     fontSize: 35,
     color: "black",

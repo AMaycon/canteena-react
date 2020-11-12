@@ -14,25 +14,40 @@ const styles = StyleSheet.create({
     marginTop: "8%",
     borderRadius: 50,
     textAlign: "center",
-    
+
   },
   botoes: {
-    position: 'absolute',
-    bottom: "19%",
+    position: 'relative',
+    marginTop:"13%",
     justifyContent: 'center',
     alignItems: 'center',
-    width:'100%'
+    width: '100%',
+    height: "25%"
   },
-  texto:{
-    padding:"10%",
-    textAlign:'center'
+  texto: {
+    textAlign: 'center',
+    marginTop: "5%",
+    fontSize: 23,
+    color: "red"
   },
   header: {
     justifyContent: 'center',
     alignItems: 'center',
-    position:'relative',
+    position: 'relative',
     marginTop: "25%"
   },
+  textoinput: {
+    fontSize: 29,
+    marginTop:"7%",
+    
+    },
+  dados: {
+    marginTop: "15%"
+  },
+  text:{
+    fontSize: 29,
+
+  }
 
 });
 
