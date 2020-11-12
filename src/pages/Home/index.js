@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Image, View, Button, SafeAreaView, Text } from 'react-native';
+import { Image, View, TouchableHighlight, SafeAreaView, Text } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import styles from './styles'
 
@@ -19,9 +19,13 @@ export default function Home({ navigation }) {
         <TextInput placeholder="Digite seu CPF" />
         <TextInput secureTextEntry={true} placeholder="Digite sua senha" />
       </View>
-      <View style={styles.botoeshome} >
-        <Button title='ENTRAR' onPress={() => navigation.navigate('Vitrine')} />
-        <Button title='CADASTRAR' onPress={() => navigation.navigate('Cadastro')} />
+      <View  style={styles.botoes} >
+        <TouchableHighlight style={styles.botoeshome} onPress={() => navigation.navigate('Vitrine')}>
+          <Text style={styles.texto}>ENTRAR</Text>
+        </TouchableHighlight>
+        <TouchableHighlight style={styles.botoeshome}  onPress={() => navigation.navigate('Cadastro')} >
+          <Text style={styles.texto}>CADASTRAR</Text>
+        </TouchableHighlight>
       </View>
 
 
