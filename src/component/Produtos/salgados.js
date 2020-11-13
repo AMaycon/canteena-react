@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import api from '../../services/api'
-import { View, Text, FlatList, Image, Modal, TouchableOpacity } from 'react-native';
-import styles from './styles';
+import { View, Text, FlatList, Image} from 'react-native';
 
 export default function Salgados() {
 
@@ -18,16 +17,16 @@ export default function Salgados() {
 
     return (
         <View >
-            <Text>Salgadinhos</Text>
             <FlatList horizontal
                 data={produtos}
                 keyExtractor={(item) => item._id}
                 renderItem={({ item }) => (
                     <View>
+                        <Text>o que será</Text>
                         <Image style={{ width: 60, height: 60 }} source={{ uri: item.imagem_txt }} />
                         <View>
                             <Text>{item.nome_produto}</Text>
-                            <Text>Diposníveis: {item.qtd_produto}</Text>
+                            <Text>Disponíveis: {item.qtd_produto}</Text>
                             <Text>R${item.preco_produto.toFixed(2)}</Text>
                             <Text>{item.descricao_produto}</Text>
                         </View>

@@ -10,6 +10,7 @@ import Cadastro from '../pages/Cadastro';
 import Vitrine from '../component/Vitrine';
 import Doces from '../component/Produtos/doces';
 
+
 const Stack = createStackNavigator();
 
 // o nome atribuido será usado futuramente para navegar entre as as telas, será inserido em  onPress={() => navigation.navigate('nomedatela)
@@ -17,7 +18,7 @@ const Stack = createStackNavigator();
 export default function Routes() {
   return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="Detail">
           <Stack.Screen name="Perfil" component={Perfil} options={{ headerShown: false }} />
           <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
           <Stack.Screen name="Carrinho" component={Carrinho} options={{ headerShown: false }} />

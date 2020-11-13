@@ -44,16 +44,15 @@ export default function Doces({navigation}) {
 
     return (
         <View >
-            <Text>Docinhos</Text>
             <FlatList horizontal
                 data={produtos}
-                keyExtractor={item => item._id}
+                keyExtractor={(item) => item._id}
                 renderItem={({ item }) => (
                     <View>
                         <Image style={{ width: 60, height: 60 }} source={{ uri: item.imagem_txt }} />
                         <View>
                             <Text>{item.nome_produto}</Text>
-                            <Text>Diposníveis: {item.qtd_produto}</Text>
+                            <Text>Disponíveis: {item.qtd_produto}</Text>
                             <Text>R${item.preco_produto.toFixed(2)}</Text>
                             <Text>{item.descricao_produto}</Text>
                         </View>

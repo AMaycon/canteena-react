@@ -5,25 +5,23 @@ import Salgados from "../../component/Produtos/salgados";
 import Doces from "../../component/Produtos/doces";
 
 
-export default function Vitrine({ navigation }) {
+export default function Vitrine() {
 
     return (
-        <View style={{ height: "90%", backgroundColor: 'blue', marginTop: "10%" }}>
+        <View style={{flex:1, height: "90%", backgroundColor: '#ffb74d', marginTop: "10%" }}>
             <Text>teste02</Text>
-            <View style={{ height: "28%", backgroundColor: 'red', marginTop: "8%" }}>
+            <View>
                 <Text>teste03</Text>
-                <Bebidas />
+                <Bebidas/>
             </View>
             <View>
                 <Text>teste04</Text>
-                <Salgados />
+                <Salgados/>
             </View>
             <View>
                 <Text>teste05</Text>
-                <Doces />
+                <Doces/>
             </View>
         </View>
-
-
     );
 }
