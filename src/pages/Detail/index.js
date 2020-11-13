@@ -21,22 +21,22 @@ export default function Detail({ navigation }) {
 
     }
 
-    await api.post("/usuarios", 
-      data
-    )
-      .then((response) => {
-        alert("criado com sucesso")
-        (navigation.navigate('Home'))
-      })
-      .catch((error) => {
-        alert("deu ruim")
-      })
+    // await api.post("/usuarios", 
+    //   data
+    // )
+    //   .then((response) => {
+    //     alert("criado com sucesso")
+    //     (navigation.navigate('Home'))
+    //   })
+    //   .catch((error) => {
+    //     alert("deu ruim")
+    //   })
 
-    //   if (nome !== '' && email !== '' && senha !== '') {
-    //     const response = await api.post('/usuarios', data);
-
-    //   response.status === 200 ? (navigation.navigate('Vitrine')) : (alert('Usuário ou senha inválidos!'))
-    //   }
+      if (nome !== '' && email !== '' && senha !== '' && tipo!=='') {
+        const response = await api.post('/usuarios', data);
+        alert("Usuário cadastrado com sucesso")
+       navigation.navigate('Home') 
+      }
   }
 
   return (
