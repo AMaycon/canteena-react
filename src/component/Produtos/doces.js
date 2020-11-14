@@ -1,24 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, Button } from 'react-native';
 import api from '../../services/api'
 import { FlatList } from "react-native-gesture-handler";
+import styles from "../../pages/Home/styles";
 
 
-export default function Doces({navigation}) {
+export default function Doces() {
+    const [quantidade, setQuantidade] = useState(0);
+    const [compras, setCompras] = useState([]);
+    const [valor, setValor] = useState(0);
 
-    function filtrodescricao(descricao) {
-        if (descricao.length < 27) {
-            return descricao;
-        }
-
-        return `${descricao.substring(0, 24)}...`;
-    }
-    function add(valor) {
-        setQuantidade(quantidade + 1);
-
-        if (quantidade >= 1) {
-            setTotal((valor) * (quantidade));
-        }
+    function add(vlr) {
+        var vlr = setQuantidade(quantidade + 1)
+    //  = setValor((quantidade)*(valor))
+       return alert(vlr)
     }
 
     function remove() {
@@ -27,9 +22,19 @@ export default function Doces({navigation}) {
             setQuantidade(quantidade)
         } else {
             setQuantidade(quantidade - 1);
-
         }
     }
+
+    function filtrodescricao(descricao) {
+        if (descricao.length < 27) {
+            return descricao;
+        }
+
+        return `${descricao.substring(0, 24)}...`;
+    }
+
+
+
 
     const [produtos, setProdutos] = useState([])
 
@@ -43,7 +48,7 @@ export default function Doces({navigation}) {
     }, [])
 
     return (
-        <View >
+        <View style={{ marginTop: "15%" }} >
             <FlatList horizontal
                 data={produtos}
                 keyExtractor={(item) => item._id}
@@ -56,6 +61,14 @@ export default function Doces({navigation}) {
                             <Text>R${item.preco_produto.toFixed(2)}</Text>
                             <Text>{item.descricao_produto}</Text>
                         </View>
+                        <View style={styles.btn}>
+                            <Button onPress={add} title="+" style={styles.btnadd}></Button>
+                            <Text>{quantidade}</Text>
+                            <Button onPress={remove} title="-" style={styles.btnrem}></Button>
+                        </View>
+                        <Button title="ADICIONAR" style={styles.btnrem}></Button>
+                        <Text>Total: R${valor.toFixed(2)}</Text>
+
                     </View>
                 )}
             />
