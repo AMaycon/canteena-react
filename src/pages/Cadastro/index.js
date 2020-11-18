@@ -1,19 +1,40 @@
-import React from 'react';
-import { View,Button, TextInput,Text } from 'react-native';
+import React, { useState } from 'react';
+import { View, TouchableHighlight, TextInput, Text } from 'react-native';
+import api from '../../services/api'
 import styles from './styles'
 
 
-export default function Cadastro({ navigation}) {
+export default function Cadastro({ navigation }) {
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [tipo, setTipo] = useState('');
+
+  async function handleSubmit() {
+    const data = {
+      nome: nome,
+      email: email,
+      senha: senha,
+      tipo: tipo
+    }
+    if (nome !== '' && email !== '' && senha !== '' && tipo !== '') {
+      const response = await api.post('/usuarios', data);
+      alert("Usuário cadastrado com sucesso")
+      navigation.navigate('Home')
+    }
+  }
   return (
-    <View style={styles.container} >
-      <Text>Realize seu cadastro para disfrutar </Text>
-      <TextInput  placeholder="Digite seu nome completo"  focusedColor='blue' defaultColor='grey'/>
-      <TextInput placeholder="Digite seu CPF" focusedColor='blue' defaultColor='grey' />
-      <TextInput placeholder="Digite seu e-mail nome@provedor.com" focusedColor='blue' defaultColor='grey'/>
-      <TextInput placeholder="Digite sua senha" focusedColor='blue' defaultColor='grey' />
-       <TextInput placeholder="Repita sua senha" focusedColor='blue' defaultColor='grey'/>
-      <Button title='Cadastrar' onPress={() => navigation.navigate('Home')} />
-      <Button title='Limpar' onPress={() => navigation.navigate('Detail')}/>
+    <View >
+        <TextInput placeholder="Digite seu nome completo" onChange={e => setNome(e.target.value)} />
+        <TextInput placeholder="Digite seu CPF" onChange={e => setEmail(e.target.value)} />
+        <TextInput placeholder="Digite seu e-mail nome@provedor.com" onChange={e => setEmail(e.target.value)} />
+        <TextInput placeholder="Digite sua senha" onChange={e => setSenha(e.target.value)} />
+        <TextInput placeholder="tipo" onChange={e => setTipo(e.target.value)} />
+        <View >
+          <TouchableHighlight onPress={handleSubmit}>
+            <Text>CADASTRAR</Text>
+          </TouchableHighlight>
+        </View>
     </View>
-  );
+  )
 }

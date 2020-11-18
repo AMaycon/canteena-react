@@ -21,17 +21,6 @@ export default function Detail({ navigation }) {
 
     }
 
-    // await api.post("/usuarios", 
-    //   data
-    // )
-    //   .then((response) => {
-    //     alert("criado com sucesso")
-    //     (navigation.navigate('Home'))
-    //   })
-    //   .catch((error) => {
-    //     alert("deu ruim")
-    //   })
-
       if (nome !== '' && email !== '' && senha !== '' && tipo!=='') {
         const response = await api.post('/usuarios', data);
         alert("Usuário cadastrado com sucesso")
