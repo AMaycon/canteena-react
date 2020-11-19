@@ -9,8 +9,8 @@ export default function Salgados() {
     useEffect(() => {
         async function ListaEstoque() {
             await api.get('/filtro?tipo_produto=3')
-                .then((response) => setProdutos(response.data))
-                .catch(erro => console.log(erro))
+            .then((response) => setProdutos(response.data))
+            .catch(erro => console.log(erro))
         }
         ListaEstoque()
     }, [])

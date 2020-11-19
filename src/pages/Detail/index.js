@@ -11,22 +11,22 @@ export default function Detail({ navigation }) {
   const [tipo, setTipo ] = useState('');
 
 
-  async function handleSubmit() {
+  // async function handleSubmit() {
 
-    const data = {
-      nome: nome,
-      email: email,
-      senha: senha,
-      tipo: tipo
+  //   const data = {
+  //     nome: nome,
+  //     email: email,
+  //     senha: senha,
+  //     tipo: tipo
 
-    }
+  //   }
 
-      if (nome !== '' && email !== '' && senha !== '' && tipo!=='') {
-        const response = await api.post('/usuarios', data);
-        alert("Usuário cadastrado com sucesso")
-       navigation.navigate('Home') 
-      }
-  }
+  //     if (nome !== '' && email !== '' && senha !== '' && tipo!=='') {
+  //       const response = await api.post('/usuarios', data);
+  //       alert("Usuário cadastrado com sucesso")
+  //      navigation.navigate('Home') 
+  //     }
+  // }
 
   return (
     <View >
