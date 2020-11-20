@@ -2,8 +2,10 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "#ffb74d",
     flex: 1,
-    backgroundColor: "#ffb74d"
+    alignItems: "center",
+    justifyContent: "center"
   },
   botoeshome: {
     backgroundColor: "#fff",

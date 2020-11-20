@@ -8,8 +8,8 @@ export default function Bebidas() {
     useEffect(() => {
         async function ListaEstoque() {
             await api.get('/filtro?tipo_produto=1')
-                .then((response) => setProdutos(response.data))
-                .catch(erro => console.log(erro))
+            .then((response) => setProdutos(response.data))
+            .catch(erro => console.log(erro))
         }
         ListaEstoque()
     }, [])
